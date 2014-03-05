@@ -1,1 +1,2 @@
-apt-get install libusb-dev libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev bluetooth
+sudo apt-get update --yes
+sudo apt-get install libusb-dev libdbus-1-dev libglib2.0-dev libudev-dev libical-dev libreadline-dev bluetooth --yes
