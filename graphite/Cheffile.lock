@@ -1,0 +1,40 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apache2 (1.9.6)
+      iptables (>= 0.0.0)
+      logrotate (>= 0.0.0)
+      pacman (>= 0.0.0)
+    build-essential (1.4.4)
+    iptables (0.12.0)
+    logrotate (1.5.0)
+    memcached (1.7.0)
+      runit (~> 1.0)
+      yum (~> 3.0)
+      yum-epel (>= 0.0.0)
+    pacman (1.1.1)
+    python (1.4.6)
+      build-essential (>= 0.0.0)
+      yum-epel (>= 0.0.0)
+    runit (1.5.8)
+      build-essential (>= 0.0.0)
+      yum (~> 3.0)
+      yum-epel (>= 0.0.0)
+    yum (3.1.2)
+    yum-epel (0.3.4)
+      yum (~> 3.0)
+
+GIT
+  remote: https://github.com/hw-cookbooks/graphite
+  ref: master
+  sha: 75f8498b0eaa743dac1768f6ac054e7882a719d5
+  specs:
+    graphite (0.4.8)
+      apache2 (>= 0.0.0)
+      memcached (>= 0.0.0)
+      python (>= 0.0.0)
+      runit (~> 1.0)
+
+DEPENDENCIES
+  graphite (>= 0)
+
