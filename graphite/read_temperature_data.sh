@@ -1,4 +1,8 @@
-val=$(tail -n1 tmpfile | cut -d' ' -f8 | sed 's/.*/ibase=16; \0/' | bc)
+file=$1
+if [ -z "$file" ]; then
+  file='tmpfile'
+fi
+val=$(tail -n1 $file | cut -d' ' -f8 | sed 's/.*/ibase=16; \0/' | bc)
 temp_in_celcius=$(ruby -e "puts $val * 0.48875855327 - 50")
 temp_in_f=$(ruby -e "puts $temp_in_celcius * 9 / 5 + 32")
 SERVER=localhost
